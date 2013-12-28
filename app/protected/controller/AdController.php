@@ -35,6 +35,7 @@ class AdController extends SiteController{
     
     public function add()
     {
+    	$this->pageTitle = 'Add Your Own Ad';
     	$this->_h1 = 'Add Ad';
     }
     
