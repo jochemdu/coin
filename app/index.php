@@ -24,7 +24,7 @@ include $config['BASE_PATH'].'diagnostic/debug.php';
 
 Doo::app()->route = $route;
 
-Doo::db()->setDb($dbconfig, 'dev');
+Doo::db()->setDb($dbconfig, $config['APP_MODE']);
 
 # Uncomment for DB profiling
 // Doo::logger()->beginDbProfile('doowebsite');

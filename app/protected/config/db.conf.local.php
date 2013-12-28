@@ -37,5 +37,5 @@ $dbmap['Ingredient']['has_many']['Food'] = array('foreign_key'=>'ingredient_id',
  */
 
 $dbconfig['dev'] = array('127.0.0.1', 'coin', 'root', 'poker', 'mysql', true);
-$dbconfig['prod'] = array('cryptmart.com.mysql', 'cryptmart_com', 'cryptmart_com', 'NGskVcFh', 'mysql', true);
+$dbconfig['prod'] = array('localhost', 'coin', 'root', 'poker', 'mysql', true);
 ?>

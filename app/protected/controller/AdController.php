@@ -1,5 +1,6 @@
 <?php
 Doo::loadController('SiteController');
+Doo::loadModel('ad');
 
 class AdController extends SiteController{
 
@@ -8,9 +9,8 @@ class AdController extends SiteController{
     	$this->h1 = 'ListAds';
     	$this->pageTitle = 'Ads';
     	
-    	Doo::loadModel('Ad');
     	$ad = new Ad();
-    	$options['desc'] = 'id';
+    	$options['desc'] = 'created';
     	$options['limit'] = '2';
     	
     	$this->ads = Doo::db()->find($ad, $options);
@@ -22,7 +22,6 @@ class AdController extends SiteController{
     {
     	for($i = 1; $i <= 4; $i++)
     	{
-	    	Doo::loadModel('Ad');
 	    	$ad = new Ad();
 	    	$ad->title = 'Test'.$i;
 	    	$ad->text = 'text';
@@ -44,7 +43,6 @@ class AdController extends SiteController{
     	$this->_h1 = 'ListAds';
     	$this->pageTitle = 'Ads';
     	 
-    	Doo::loadModel('Ad');
     	$ad = new Ad();
     	$options['desc'] = 'id';
     	$options['limit'] = '2';
